@@ -7,8 +7,17 @@
   <link rel="stylesheet" th:href="@{/css/style.css}"/>
 </head>
 <body>
- <div class="wrapper">
+ 
+<div class="wrapper">
+  
+  <div class="side_bar">
   <div th:insert="~{side_bar :: side_bar}"></div>
+  </div>
+ 
+  <div class="main_chat">
   <div th:insert="~{main_chat :: main_chat}"></div>
+  </div>
+ 
+</div>
 </body>
 </html>
