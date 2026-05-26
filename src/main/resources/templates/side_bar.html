@@ -3,7 +3,7 @@
 <div th:fragment="side_bar">
   <div class="side_top">
     <div class="username">
-     <a href="#">ユーザー名</a>
+      <a th:href="@{/users/{userId}/edit(userId=${user.id})}" th:text="${user.name}">ユーザー名</a>
     </div>
     <div class="create_chat">
      <a href="#">チャットを作成する</a>
