@@ -6,5 +6,3 @@ PRIMARY KEY (id),
 FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
 FOREIGN KEY (room_id) REFERENCES rooms(id) ON DELETE CASCADE
 );
-
--- ON DELETED CASCADEは関連するテーブルの値が削除されたときにこのテーブルのレコードも削除するための設定
