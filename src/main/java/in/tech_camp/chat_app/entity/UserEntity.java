@@ -10,4 +10,5 @@ public class UserEntity {
   private String email;
   private String password;
   private List<RoomUserEntity> roomUsers;
+  private List<MessageEntity> messages;
 }
