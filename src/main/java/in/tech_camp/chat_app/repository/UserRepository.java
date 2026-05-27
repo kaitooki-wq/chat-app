@@ -1,5 +1,7 @@
 package in.tech_camp.chat_app.repository;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org. apache.ibatis.annotations.Options;
@@ -44,5 +46,8 @@ public interface UserRepository {
   // 【編集用の重複チェック】「指定されたID（自分）以外」のユーザーの中で、同じメールアドレスが使われているかを判定します
   boolean existsByEmailAndIdNot(String email, Integer id);
   // メアドと自分のIDを受け取り、他人がそのメアドをすでに使っていれば true、誰も使っていなければ false を返します
+  @Select("SELECT *  FROM users WHERE id <> #{excluded}")
+  // <> は SQL で「〜ではない（等しくない）」を表す比較演算子です（!= と同じ意味です）。
+  List<UserEntity> findAllExcept(Integer excluded);
 }
 

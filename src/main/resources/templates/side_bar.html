@@ -6,97 +6,14 @@
       <a th:href="@{/users/{userId}/edit(userId=${user.id})}" th:text="${user.name}">ユーザー名</a>
     </div>
     <div class="create_chat">
-     <a href="#">チャットを作成する</a>
+     <a th:href="@{/rooms/new}">チャットを作成する</a>
     </div>
   </div>
   <div class="side_bottom">
     <div class="rooms">
-      <div class="room">
+      <div th:each="room : ${rooms}" class="room">
         <div class="room-name">
-         <a href="#">チャットルーム1</a>
+         <a href="#" th:text="${room.name}">チャットルーム1</a>
         </div>
       </div>
-      <div class="room">
-        <div class="room-name">
-         <a href="#">チャットルーム2</a>
-        </div>
-      </div>
-      <div class="room">
-        <div class="room-name">
-         <a href="#">チャットルーム3</a>
-        </div>
-      </div>
-      <div class="room">
-        <div class="room-name"> 
-         <a href="#">チャットルーム4</a>
-        </div>
-      </div>
-      <div class="room">
-        <div class="room-name">
-         <a href="#">チャットルーム5</a>
-        </div>
-      </div>
-      <div class="room">
-        <div class="room-name">
-         <a href="#">チャットルーム6</a>
-        </div>
-      </div>
-      <div class="room">
-        <div class="roome-name">
-         <a href="#">チャットルーム7</a>
-        </div>
-      </div>
-      <div class="room">
-        <div class="room-name">
-         <a href="#">チャットルーム8</a>
-        </div>
-      </div>
-      <div class="room">
-        <div class="room-name">
-         <a href="#">チャットルーム9</a>
-        </div>
-      </div>
-      <div class="room">
-        <div class="room-name">
-         <a href="#">チャットルーム10</a>
-        </div>
-      </div>
-      <div class="room">
-        <div class="room-name">
-         <a href="#">チャットルーム11</a>
-        </div>
-      </div>
-      <div class="room">
-        <div class="room-name">
-         <a href="#">チャットルーム12</a>
-        </div>
-      </div>
-      <div class="room">
-        <div class="room-name">
-         <a href="#">チャットルーム13</a>
-        </div>
-      </div>
-      <div class="room">
-        <div class="room-name">
-         <a href="#">チャットルーム14</a>
-        </div>
-      </div>
-      <div class="room">
-        <div class="room-name">
-         <a href="#">チャットルーム15</a>
-        </div>
-      </div>
-      <div class="room">
-        <div class="room-name">
-         <a href="#">チャットルーム16</a>
-        </div>
-      </div>
-      <div class="room">
-        <div class="room-name">
-         <a href="#">チャットルーム17</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</html>
+    </div> </div> </div> </html>
