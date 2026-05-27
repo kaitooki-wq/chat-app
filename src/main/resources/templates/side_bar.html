@@ -13,7 +13,10 @@
     <div class="rooms">
       <div th:each="room : ${rooms}" class="room">
         <div class="room-name">
-         <a href="#" th:text="${room.name}">チャットルーム1</a>
+         <a th:href="@{/rooms/{roomId}/messages(roomId=${room.id})}" th:text="${room.name}">chatroom1</a>
         </div>
       </div>
-    </div> </div> </div> </html>
+    </div> 
+  </div> 
+</div> 
+</html>
