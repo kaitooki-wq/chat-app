@@ -47,7 +47,10 @@ public class MessageController {
         model.addAttribute("rooms", roomList);
         // 👆「あなたが参加している本物の部屋一覧をサイドバーに並べてね」という指示
         model.addAttribute("messageForm", new MessageForm());
-        model.addAttribute("roomId", roomId);
+        
+
+        RoomEntity room = roomRepository.findById(roomId);
+        model.addAttribute("room", room);
 
         List<MessageEntity> messages = messageRepository.findByRoomId(roomId);
         model.addAttribute("messages", messages);
