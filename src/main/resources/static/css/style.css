@@ -137,6 +137,7 @@ padding:46px 40px  0px  40px;
 
 .messages{
   height:calc(100vh - 190px);
+  overflow: scroll;
 }
 
 
