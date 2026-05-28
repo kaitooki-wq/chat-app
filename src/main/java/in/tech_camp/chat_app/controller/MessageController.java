@@ -33,6 +33,7 @@ public class MessageController {
 
   private final RoomUserRepository roomUserRepository;
 
+<<<<<<< Updated upstream
   private final RoomRepository roomRepository;
 
   private final MessageRepository messageRepository;
@@ -40,6 +41,10 @@ public class MessageController {
 
   @GetMapping("/rooms/{roomId}/messages")
   public String showMessages(@PathVariable("roomId") Integer roomId,@AuthenticationPrincipal CustomUserDetail currentUser, Model model){
+=======
+  @GetMapping("/message")
+  public String showMessages(@AuthenticationPrincipal CustomUserDetail currentUser, Model model){
+>>>>>>> Stashed changes
     UserEntity user = userRepository.findById(currentUser.getId());
     model.addAttribute("user", user);
     // 👆「ログインしているあなたの名前をサイドバーに表示してね」という指示
