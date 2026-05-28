@@ -69,7 +69,7 @@ text-decoration: none;
 width: calc(100vw - 300px);
 }
 
-.main_chat_header{
+.chat-header{
 height:100px;
 background-color: #FFFFFF;
 padding: 0px 40px;
@@ -129,6 +129,10 @@ padding:46px 40px  0px  40px;
   color: #434a54;
   font-size: 14px;
   margin-bottom: 40px;
+}
+
+.messages{
+  height:calc(100vh - 190px);
 }
 
 
