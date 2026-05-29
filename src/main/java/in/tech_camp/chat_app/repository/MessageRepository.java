@@ -28,4 +28,7 @@ public interface  MessageRepository {
   List<MessageEntity> findByRoomId(Integer roomId);
   // 「ルームID（roomId）を指定して実行すると、そのルームのメッセージを全部探して（findByRoomId）、
   // Javaのルールに合わせて綺麗に並べ替えたメッセージのリスト（List<MessageEntity>）を返します」という定義
+
+  @Select("SELECT COUNT(*) FROM messages")
+  int count();
 }
